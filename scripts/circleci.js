@@ -6,7 +6,7 @@ module.exports = function (robot) {
       var build = req.body.payload;
       robot.messageRoom(
           'random',
-          build.reponame + ' tests are ' + build.outcome + ', thanks to ' + build.committer_name
+          build.reponame + ' tests are ' + build.status + ' for commit ' + build.vcs_revision
       );
     } catch (error) {
       console.log(error);
