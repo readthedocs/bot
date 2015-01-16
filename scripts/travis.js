@@ -3,8 +3,8 @@
 module.exports = function (robot) {
     robot.router.post('/test', function (req, res) {
         try {
-            var data = JSON.parse(req.body.payload);
-            robot.messageRoom('random', req.body.payload);
+            console.dir('Got HTTP Post')
+            console.dir(req.body);
         } catch (error) {
             console.log(error);
         }
