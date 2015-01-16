@@ -3,10 +3,18 @@ module.exports = function (robot) {
     try {
       var data = req.body;
       console.dir(data);
-      robot.messageRoom(
-        'random',
-        data.topic + ' for ' + data.data
-      );
+
+      var msg;
+      if (data.topic == 'user.created') {
+        msg = 'New user: ' + data.data.item.name + '!';
+      }
+      else if (data.topic == 'company.created') {
+        msg = 'New company: ' + data.data.item.name + '!';
+      }
+      else {
+        msg = data.topic + ' for ' + data.data.item.type + ', ' + data.data.item.name;
+      }
+      robot.messageRoom('random', msg);
     } catch (error) {
       console.log(error);
     }
