@@ -3,7 +3,7 @@
 module.exports = function (robot) {
   robot.router.post('/services/tito', function (req, res) {
     try {
-      var attendee = req.body.payload;
+      var attendee = req.body;
       robot.messageRoom(
         'random',
         attendee.name + '(' + attendee.email + ') bought a ' + attendee.release + ' ticket'
