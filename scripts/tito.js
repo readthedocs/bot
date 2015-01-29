@@ -5,7 +5,7 @@ module.exports = function (robot) {
     try {
       var attendee = req.body,
           hook_name = req.get('X-Webhook-Name');
-      if (hook_name == 'ticket.created') {
+      if (hook_name == 'ticket.updated' && attendee.state_name == 'complete') {
           robot.messageRoom(
             'conference',
             attendee.name + ' (' + attendee.email + ') bought a ' + attendee.release + ' ticket');
