@@ -6,9 +6,8 @@ module.exports = function (robot) {
       var attendee = req.body;
       robot.messageRoom(
         'random',
-        attendee.name + '(' + attendee.email + ') bought a ' + attendee.release + ' ticket'
-        )
-        console.dir(req.body);
+        attendee.name + ' (' + attendee.email + ') bought a ' + attendee.release + ' ticket');
+      console.dir(req.body);
     } catch (error) {
       console.log(error);
     }
