@@ -3,10 +3,13 @@
 module.exports = function (robot) {
   robot.router.post('/services/tito', function (req, res) {
     try {
-      var attendee = req.body;
-      robot.messageRoom(
-        'conference',
-        attendee.name + ' (' + attendee.email + ') bought a ' + attendee.release + ' ticket');
+      var attendee = req.body,
+          hook_name = req.get('X-Webhook-Name');
+      if (hook_name == 'ticket.created') {
+          robot.messageRoom(
+            'conference',
+            attendee.name + ' (' + attendee.email + ') bought a ' + attendee.release + ' ticket');
+      }
       console.dir(req.body);
     } catch (error) {
       console.log(error);
