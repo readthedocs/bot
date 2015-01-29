@@ -5,7 +5,7 @@ module.exports = function (robot) {
     try {
       var attendee = req.body.payload;
       robot.messageRoom(
-        'conference',
+        'random',
         attendee.name + '(' + attendee.email + ') bought a ' + attendee.release + ' ticket'
         )
         console.dir(req.body);
