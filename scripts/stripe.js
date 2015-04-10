@@ -4,17 +4,23 @@ module.exports = function (robot) {
   robot.router.post('/services/stripe', function (req, res) {
     try {
       var stripe_event = req.body;
-      console.log(stripe_event);
-      /*
-      var attendee = req.body,
-          hook_name = req.get('X-Webhook-Name');
-      if (hook_name == 'ticket.updated' && attendee.state_name == 'complete') {
-          robot.messageRoom(
-            'conference',
-            attendee.name + ' (' + attendee.email + ') bought a ' + attendee.release + ' ticket');
+
+      if (stripe_event.type = 'charge.succeeded') {
+        var charge = stripe_event.data.object,
+            amount = charge.amount / 100,
+            live = charge.livemode,
+            info = 'live';
+
+        if (!live) {
+          info = 'test';
+        }
+        robot.messageRoom(
+          'random',
+          'Just got a ' + info + ' donation for $' + amount);
       }
-      console.dir(req.body);
-      */
+      else {
+        console.dir(stripe_event);
+      }
     } catch (error) {
       console.log(error);
     }
