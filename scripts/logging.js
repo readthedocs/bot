@@ -19,7 +19,7 @@ module.exports = function (robot) {
 
             if (parts.length > 0) {
                 robot.messageRoom(
-                    'general',
+                    'ops',
                     parts.join(' ')
                 );
             }
