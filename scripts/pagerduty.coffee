@@ -53,7 +53,7 @@ pagerDutySubdomain     = process.env.HUBOT_PAGERDUTY_SUBDOMAIN
 pagerDutyBaseUrl       = "https://#{pagerDutySubdomain}.pagerduty.com/api/v1"
 pagerDutyServiceApiKey = process.env.HUBOT_PAGERDUTY_SERVICE_API_KEY
 pagerDutyScheduleId    = process.env.HUBOT_PAGERDUTY_SCHEDULE_ID
-pagerRoom              = process.env.HUBOT_PAGERDUTY_ROOM
+pagerRoom              = process.env.HUBOT_PAGERDUTY_ROOM || "#ops"
 # Webhook listener endpoint. Set it to whatever URL you want, and make sure it matches your pagerduty service settings 
 pagerEndpoint          = process.env.HUBOT_PAGERDUTY_ENDPOINT || "/services/pagerduty"
 
