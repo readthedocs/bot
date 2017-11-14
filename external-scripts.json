@@ -6,5 +6,6 @@
   "hubot-redis-brain",
   "hubot-rules",
   "hubot-shipit",
-  "hubot-karma"
+  "hubot-karma",
+  "hubot-cron"
 ]
