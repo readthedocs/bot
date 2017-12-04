@@ -12,7 +12,8 @@ module.exports = function (robot) {
         msg = 'New company: ' + data.data.item.name + '!';
       }
       else {
-        msg = data.topic + ' for ' + data.data.item.type + ', ' + data.data.item.name;
+        console.log(data.topic + ' for ' + data.data.item.type);
+        console.dir(data.data);
       }
       robot.messageRoom('random', msg);
     } catch (error) {
