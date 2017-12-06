@@ -7,5 +7,6 @@
   "hubot-rules",
   "hubot-shipit",
   "hubot-karma",
-  "hubot-cron"
+  "hubot-cron",
+  "hubot-timezone"
 ]
