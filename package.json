@@ -12,6 +12,7 @@
     "hubot-google-images": "^0.1.2",
     "hubot-help": "^0.1.1",
     "hubot-heroku-keepalive": "0.0.4",
+    "hubot-irc": "^0.4.0",
     "hubot-karma": "^0.2.2",
     "hubot-redis-brain": "0.0.2",
     "hubot-rules": "^0.1.0",

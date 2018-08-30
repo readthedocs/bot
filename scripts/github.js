@@ -22,7 +22,7 @@ module.exports = function (robot) {
             repo = "rtfd/readthedocs-corporate";
         }
 
-        return "https://github.com/" + repo + "/issue/" + issue;
+        return "https://github.com/" + repo + "/issues/" + issue;
     };
 
     robot.hear(multi_search, function (msg) {
