@@ -33,7 +33,7 @@ module.exports = function (robot) {
         });
 
         if (issues) {
-            var message = "Looks like you mentioned a couple issues:";
+            var message = "Looks like you mentioned a GitHub issue:";
             issues.forEach(function (issue) {
                 message = message + " " + issue;
             });
