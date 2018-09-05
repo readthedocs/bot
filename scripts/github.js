@@ -15,6 +15,9 @@ module.exports = function (robot) {
         else if (repo.match(/^(?:rtd|rtfd|readthedocs)?-?ops$/i)) {
             repo = "rtfd/readthedocs-ops";
         }
+        else if (repo.match(/^(?:rtd|rtfd|readthedocs)?-?(?corporate|corp)-ops$/i)) {
+            repo = "rtfd/readthedocs-corporate-ops";
+        }
         else if (repo.match(/^(?:rtd|rtfd|readthedocs)?-?ext$/i)) {
             repo = "rtfd/readthedocs-ext";
         }
@@ -22,7 +25,7 @@ module.exports = function (robot) {
             repo = "rtfd/readthedocs-corporate";
         }
 
-        return "https://github.com/" + repo + "/issues/" + issue;
+        return "https://github.com/rtfd/" + repo + "/issues/" + issue;
     };
 
     robot.hear(multi_search, function (msg) {
