@@ -25,7 +25,11 @@ module.exports = function (robot) {
             repo = "rtfd/readthedocs-corporate";
         }
 
-        return "https://github.com/rtfd/" + repo + "/issues/" + issue;
+        if (! repo.match(/^rtfd\//i)) {
+            repo = "rtfd/" + repo;
+        }
+
+        return "https://github.com/" + repo + "/issues/" + issue;
     };
 
     robot.hear(multi_search, function (msg) {
