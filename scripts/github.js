@@ -15,7 +15,7 @@ module.exports = function (robot) {
         else if (repo.match(/^(?:rtd|rtfd|readthedocs)?-?ops$/i)) {
             repo = "rtfd/readthedocs-ops";
         }
-        else if (repo.match(/^(?:rtd|rtfd|readthedocs)?-?(?:corporate|corp)-ops$/i)) {
+        else if (repo.match(/^(?:rtd|rtfd|readthedocs)?-?corp(?:|orate)-ops$/i)) {
             repo = "rtfd/readthedocs-corporate-ops";
         }
         else if (repo.match(/^(?:rtd|rtfd|readthedocs)?-?ext$/i)) {
