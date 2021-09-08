@@ -10,23 +10,23 @@ module.exports = function (robot) {
         var issue = match[2].trimLeft();
 
         if (repo === "") {
-            repo = "rtfd/readthedocs.org";
+            repo = "readthedocs/readthedocs.org";
         }
         else if (repo.match(/^(?:rtd|rtfd|readthedocs)?-?ops$/i)) {
-            repo = "rtfd/readthedocs-ops";
+            repo = "readthedocs/readthedocs-ops";
         }
         else if (repo.match(/^(?:rtd|rtfd|readthedocs)?-?corp(?:|orate)-ops$/i)) {
-            repo = "rtfd/readthedocs-corporate-ops";
+            repo = "readthedocs/readthedocs-corporate-ops";
         }
         else if (repo.match(/^(?:rtd|rtfd|readthedocs)?-?ext$/i)) {
-            repo = "rtfd/readthedocs-ext";
+            repo = "readthedocs/readthedocs-ext";
         }
         else if (repo.match(/^(?:rtd|rtfd|readthedocs)?-?corp(?:|orate)$/i)) {
-            repo = "rtfd/readthedocs-corporate";
+            repo = "readthedocs/readthedocs-corporate";
         }
 
         if (! repo.match(/^rtfd\//i)) {
-            repo = "rtfd/" + repo;
+            repo = "readthedocs/" + repo;
         }
 
         return "https://github.com/" + repo + "/issues/" + issue;
