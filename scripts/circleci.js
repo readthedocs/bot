@@ -2,15 +2,7 @@
 
 module.exports = function (robot) {
   robot.router.post('/services/circleci', function (req, res) {
-    try {
-      var build = req.body.payload;
-      robot.messageRoom(
-          'random',
-          build.reponame + ' tests are ' + build.status + ' for commit ' + build.vcs_revision
-      );
-    } catch (error) {
-      console.log(error);
-    }
+    robot.messageRoom('testing', 'TEST');
     res.send('OK');
   });
 };

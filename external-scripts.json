@@ -3,9 +3,6 @@
   "hubot-help",
   "hubot-heroku-keepalive",
   "hubot-google-images",
-  "hubot-redis-brain",
   "hubot-rules",
-  "hubot-karma",
-  "hubot-cron",
-  "hubot-timezone"
+  "hubot-karma"
 ]

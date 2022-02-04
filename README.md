@@ -1,6 +1,6 @@
 # Bot
 
-This bot runs on Heroku. See Hubot docs for developing this locally.
+This bot runs on Repl.it. See Hubot docs for developing this locally.
 
 ## Running locally
 
