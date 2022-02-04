@@ -1,6 +1,12 @@
 # Bot
 
-This bot runs on Repl.it. See Hubot docs for developing this locally.
+This bot runs on Repl.it:
+
+https://replit.com/@agj2/bot
+
+## Development
+
+See Hubot docs for developing this locally.
 
 ## Running locally
 
