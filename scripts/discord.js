@@ -8,7 +8,7 @@ module.exports = function (robot) {
       Intents.FLAGS.GUILD_VOICE_STATES,
     ]
   });
-  const slack_room = "testing";
+  const slack_room = "discord";
   var channels = {};
 
   bot.login(process.env.DISCORD_BOT_TOKEN);
