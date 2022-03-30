@@ -25,10 +25,6 @@ module.exports = function (robot) {
             repo = "readthedocs/readthedocs-corporate";
         }
 
-        if (! repo.match(/^rtfd\//i)) {
-            repo = "readthedocs/" + repo;
-        }
-
         return "https://github.com/" + repo + "/issues/" + issue;
     };
 
