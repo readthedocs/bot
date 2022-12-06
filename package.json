@@ -6,7 +6,7 @@
   "description": "Read the Docs chatbot",
   "dependencies": {
     "discord.js": "^13.6.0",
-    "hubot": "^2.19.0",
+    "hubot": "^3.3.2",
     "hubot-diagnostics": "0.0.1",
     "hubot-google-images": "^0.1.2",
     "hubot-help": "^0.1.1",
